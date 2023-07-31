@@ -35,7 +35,7 @@ CREATE TABLE merchant (
 CREATE TABLE transaction (
   id INT PRIMARY KEY NOT NULL,
   date timestamp,
-  amount DECIMAL,
+  amount DECIMAL(20, 2),
   card VARCHAR(20),
   FOREIGN KEY (card) REFERENCES credit_card(card),
   id_merchant INT,
